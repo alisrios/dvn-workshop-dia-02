@@ -13,8 +13,8 @@ variable "auth" {
   })
 
   default = {
-    assume_role_arn = "arn:aws:iam::654654554686:role/workshop-role"
-    region          = "us-west-1"
+    assume_role_arn = "arn:aws:iam::148761658767:role/assume-role-terraform"
+    region          = "us-east-1"
   }
 }
 
@@ -50,25 +50,25 @@ variable "vpc" {
     public_subnets = [{
       name                    = "workshop-devops-na-nuvem-vpc-public-subnet-1a"
       cidr_block              = "10.0.0.0/26"
-      availability_zone       = "us-west-1a"
+      availability_zone       = "us-east-1a"
       map_public_ip_on_launch = true
       },
       {
         name                    = "workshop-devops-na-nuvem-vpc-public-subnet-1c"
         cidr_block              = "10.0.0.64/26"
-        availability_zone       = "us-west-1c"
+        availability_zone       = "us-east-1c"
         map_public_ip_on_launch = true
     }]
     private_subnets = [{
       name                    = "workshop-devops-na-nuvem-vpc-private-subnet-1a"
       cidr_block              = "10.0.0.128/26"
-      availability_zone       = "us-west-1a"
+      availability_zone       = "us-east-1a"
       map_public_ip_on_launch = false
       },
       {
         name                    = "workshop-devops-na-nuvem-vpc-private-subnet-1c"
         cidr_block              = "10.0.0.192/26"
-        availability_zone       = "us-west-1c"
+        availability_zone       = "us-east-1c"
         map_public_ip_on_launch = false
     }]
   }
